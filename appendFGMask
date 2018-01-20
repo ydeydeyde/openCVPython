@@ -1,0 +1,29 @@
+# Written with help from Andreas Baum
+
+import numpy as np
+import cv2
+#from matplotlib import pyplot as plt
+
+cap = cv2.VideoCapture(0)
+
+fgbg = cv2.createBackgroundSubtractorMOG2(history=100,varThreshold=50,detectShadows=True)
+
+# Create 4 empty lists in which we append true and/or false to
+white1 = []
+white2 = []
+white3 = []
+white4 = []
+
+for a in range(300):
+    ret, frame = cap.read()
+    
+    fgmask = fgbg.apply(frame)
+    
+    cv2.imshow('frame',fgmask)
+    white1.append(fgmask[320:380, 540])
+    white2.append(fgmask[0:10,12])
+    #white3.append(fgmask[0:10,12])
+    #white4.append(fgmask[0:10,12])
+
+cap.release()
+cv2.destroyAllWindows()
