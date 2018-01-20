@@ -1,4 +1,6 @@
-
+# It only prints out white pixels in the center of the webcam. 
+# How do we extend it to look for pixels in the whole screen? 
+# These pixels will afterwords be assigned to adressable LED pixels
 import numpy as np
 import cv2
 
