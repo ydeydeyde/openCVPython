@@ -24,7 +24,7 @@ LED_1_PIN        = 18      # GPIO pin connected to the pixels (18 uses PWM!).
 LED_1_FREQ_HZ    = 800000  # LED signal frequency in hertz (usually 800khz)
 LED_1_DMA        = 10      # DMA channel to use for generating signal (try 10)
 LED_1_BRIGHTNESS = 255     # Set to 0 for darkest and 255 for brightest
-LED_1_INVERT     = False   # True to invert the signal (when using NPN transistor level shift)
+LED_1_INVERT     = True   # True to invert the signal (when using NPN transistor level shift) 3.3 V to 5 V
 LED_1_CHANNEL    = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
 LED_1_STRIP      = ws.WS2811_STRIP_GRB   # Strip type and colour ordering
 
@@ -33,7 +33,7 @@ LED_2_PIN        = 13      # GPIO pin connected to the pixels (must support PWM!
 LED_2_FREQ_HZ    = 800000  # LED signal frequency in hertz (usually 800khz)
 LED_2_DMA        = 11      # DMA channel to use for generating signal (Between 1 and 14)
 LED_2_BRIGHTNESS = 128     # Set to 0 for darkest and 255 for brightest
-LED_2_INVERT     = False   # True to invert the signal (when using NPN transistor level shift)
+LED_2_INVERT     = True   # True to invert the signal (when using NPN transistor level shift) 3.3 V to 5 V
 LED_2_CHANNEL    = 1       # 0 or 1
 LED_2_STRIP      = ws.WS2811_STRIP_GRB
 
